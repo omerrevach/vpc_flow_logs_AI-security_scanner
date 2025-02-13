@@ -26,8 +26,15 @@ while True:
     
     state = query_details['QueryExecution']['Status']['State']
     if state == 'SUCCEEDED':
-        query_result = athena_client.get_query_results(
-            QueryExecutionId=execution_id
-        )
+        print(f"Query State: {state}")
+        break
+    
+    elif state == 'FAILED' or 'CANCELLED':
+        print(f"Query State: {state}, check Athena for the logs")
+        exit()
         
-print(query_result)
+        
+# query_result = athena_client.get_query_results(
+#             QueryExecutionId=execution_id
+#         )
+# print(query_result)
