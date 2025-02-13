@@ -81,6 +81,9 @@ resource "aws_iam_role_policy" "flow_logs_attachment" {
 
 # ---------------------------- Athena And Glue Setup ----------------------------
 
+# https://nocode.autify.com/blog/optimizing-cloud-application-log-management
+# https://signoz.io/guides/vpc-flow-logs/
+
 # S3 Bucket for Athena query results
 resource "aws_s3_bucket" "athena_results_bucket" {
   bucket = "vpc-flow-logs-athena-querylogs-results"
