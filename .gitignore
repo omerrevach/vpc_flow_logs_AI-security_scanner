@@ -1,0 +1,30 @@
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+.venv/
+*.idea
+*.DS_STORE
+
+# Docker
+*.log
+*.pid
+*.seed
+*.pid.lock
+*.swp
+.env
+
+# SQLite database
+*.sqlite3
+
+# DB
+instance/
+
+
+.terraform/
+terraform
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*

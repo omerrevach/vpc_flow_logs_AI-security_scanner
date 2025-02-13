@@ -83,7 +83,7 @@ resource "aws_iam_role_policy" "flow_logs_attachment" {
 
 # S3 Bucket for Athena query results
 resource "aws_s3_bucket" "athena_results_bucket" {
-  bucket = "vpc-flow-logs-athena-results"
+  bucket = "vpc-flow-logs-athena-querylogs-results"
 }
 
 # AWS Glue Database for Athena
