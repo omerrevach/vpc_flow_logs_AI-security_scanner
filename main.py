@@ -1,7 +1,7 @@
 import boto3
 import time
 import pandas as pd
-from pyod.models.iforest import IForest
+# from pyod.models.iforest import IForest
 
 athena_client = boto3.client('athena')
 
@@ -34,7 +34,8 @@ while True:
         exit()
         
         
-# query_result = athena_client.get_query_results(
-#             QueryExecutionId=execution_id
-#         )
-# print(query_result)
+query_result = athena_client.get_query_results(
+            QueryExecutionId=execution_id
+)
+results = query_result['ResultSet']['Rows']
+print(results)
